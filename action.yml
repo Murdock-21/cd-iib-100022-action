@@ -1,0 +1,43 @@
+name: IIB100022 CD Action
+description: Genera empaquetado de aplicaciones y despliegue a IIB 10
+author: Marcelino Rodríguez López 
+
+inputs:
+  LICENSE:
+    description: "Verificación de la licencia IIB 10 "
+    required: true
+  PROJECT:
+    description: "Nombre del proyecto que se enviara a desplegar"
+    required: true
+  REMOTE_NODE_NAME:
+    description: "Nombre del nodo de integracion remoto"
+    required: true
+  REMOTE_SERVER_NAME:
+    description: "Nombre del servidor remoto"
+    required: true
+  REMOTE_IP:
+    description: "IP del nodo de integración remoto"
+    required: true
+  REMOTE_PORT:
+    description: "Puerto del nodo de integración remoto"
+    required: true
+  REMOTE_USER:
+    description: "Nombre de usuario del nodo de integracion remoto"
+    required: false
+  REMOTE_PASSWORD:
+    description: "Contraseña de usuario del nodo de integracion remoto"
+    required: false
+  REMOTE_SSL_TRUST_STORE_PATH:
+    description: "Ruta del almacén de confianza ssl"
+    required: false
+  REMOTE_USE_SSL:
+    description: "Indicador para el uso de SSL"
+    required: true
+    
+runs:
+  using: "docker"
+  image: "Dockerfile"
+  
+branding:
+  icon: "activity"
+  color: "blue"
