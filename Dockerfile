@@ -1,17 +1,10 @@
-# © Copyright IBM Corporation 2015.
-#
-# All rights reserved. This program and the accompanying materials
-# are made available under the terms of the Eclipse Public License v1.0
-# which accompanies this distribution, and is available at
-# http://www.eclipse.org/legal/epl-v10.html
-
 FROM d0ck3rmrl22/iib100022
 
 LABEL maintainer "Marcelino Rodriguez <mrodriguezl@tec.com>"
 
 ADD entrypoint.sh /entrypoint.sh
 
-# Copy in script files
+# Copiar en archivos de script
 COPY entrypoint.sh /usr/local/bin/
 COPY iib-license-check.sh /usr/local/bin/
 COPY iib_env.sh /usr/local/bin/
